@@ -11,9 +11,10 @@ This is a fully functional Flutter Shopping App that simulates a real-world shop
   - Confirmation dialogs on successful sign-up/sign-in.
 - **Smooth animated navigation** between screens.
 - **Shopping Home Screen:**  
-  - AppBar titled “Our Products” (localized to Arabic).  
+  - AppBar titled “Our Products” .  
   - Horizontal PageView displaying featured product images.  
-  - Responsive GridView showing product cards (2 per row) with image, title, and add-to-cart icon.  
+  - Responsive GridView showing product cards (2 per row) with image, title, and add-to-cart icon.
+  - -vertical ListView
   - SnackBar notification when an item is added to the cart.  
   ## Screenshots
   -![welcome](assets/screenshots/Screenshot.png)
