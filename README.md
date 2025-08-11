@@ -15,4 +15,9 @@ This is a fully functional Flutter Shopping App that simulates a real-world shop
   - Horizontal PageView displaying featured product images.  
   - Responsive GridView showing product cards (2 per row) with image, title, and add-to-cart icon.  
   - SnackBar notification when an item is added to the cart.  
-  -
+  ## Screenshots
+  -![welcome](assets/screenshots/Screenshot.png)
+  -![sign up](assets/screenshots/Screenshot1.png)
+  -![sign in](assets/screenshots/Screenshot11.png)
+  -![shopping page](assets/screenshots/Screenshot2.png)
+  -![shopping page2](assets/screenshots/Screenshot4.png)
