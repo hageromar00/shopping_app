@@ -1,17 +1,18 @@
-# shopping_app
+# Flutter Shopping App
 
-A new Flutter project.
+## Project Overview
+This is a fully functional Flutter Shopping App that simulates a real-world shopping experience. The app includes user authentication (Sign Up and Sign In), product browsing, cart interactions
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-"# shopping_app" 
+## Features
+- **Welcome Screen** with custom fonts and images.
+- **User Authentication:**  
+  - Sign Up with validation (name, email, password, confirm password).  
+  - Sign In with validation (email, password).  
+  - Confirmation dialogs on successful sign-up/sign-in.
+- **Smooth animated navigation** between screens.
+- **Shopping Home Screen:**  
+  - AppBar titled “Our Products” (localized to Arabic).  
+  - Horizontal PageView displaying featured product images.  
+  - Responsive GridView showing product cards (2 per row) with image, title, and add-to-cart icon.  
+  - SnackBar notification when an item is added to the cart.  
+  -
