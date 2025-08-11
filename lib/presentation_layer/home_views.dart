@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:shopping_app/presentation_layer/screens/sign_in.dart';
+import 'package:shopping_app/presentation_layer/screens/sign_up.dart';
+import 'package:shopping_app/presentation_layer/screens/widget_home/custom_button.dart';
+import 'package:shopping_app/presentation_layer/screens/widget_home/custom_image.dart';
+import 'package:shopping_app/presentation_layer/screens/widget_home/custom_text.dart';
 
 class HomeViews extends StatelessWidget {
   const HomeViews({super.key});
@@ -13,7 +17,7 @@ class HomeViews extends StatelessWidget {
           style: TextStyle(color: Colors.white),
         ),
         centerTitle: true,
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Colors.blueGrey,
       ),
       body: SafeArea(
         child: Center(
@@ -22,75 +26,38 @@ class HomeViews extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Row(
-                  //  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      'assets/images/welcome.png',
-                      width: 170,
-                      height: 110,
-                      fit: BoxFit.cover,
-                    ),
-                    const SizedBox(width: 12),
-                    Image.network(
-                      'https://i.postimg.cc/D0ZnkWDb/undraw-shopping-app-b80f.png',
-                      width: 110,
-                      height: 110,
-                      fit: BoxFit.cover,
-                    ),
-                  ],
-                ),
+                CustomImage(),
                 const SizedBox(height: 20),
-                const Text(
-                  'Welcome to Our Shop',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.deepPurple,
-                  ),
-                ),
+                CustomText(),
                 const SizedBox(height: 28),
-                SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) {
-                            return SignInViews();
-                          },
-                        ),
-                      );
-                      // GoRouter.of(context).push(AppRouter.ksignup);
-                    },
-                    child: const Padding(
-                      padding: EdgeInsets.symmetric(vertical: 12),
-                      child: Text('Sign Up', style: TextStyle(fontSize: 16)),
-                    ),
-                  ),
+                CustomButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return SignUpViews();
+                        },
+                      ),
+                    );
+                  },
+                  text: 'Sign Up',
+                ),
+                const SizedBox(height: 10),
+                CustomButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return SignInViews();
+                        },
+                      ),
+                    );
+                  },
+                  text: 'Sign In',
                 ),
                 const SizedBox(height: 12),
-                SizedBox(
-                  width: double.infinity,
-                  child: OutlinedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) {
-                            return SignInViews();
-                          },
-                        ),
-                      );
-                    },
-                    child: const Padding(
-                      padding: EdgeInsets.symmetric(vertical: 12),
-                      child: Text('Sign In', style: TextStyle(fontSize: 16)),
-                    ),
-                  ),
-                ),
               ],
             ),
           ),

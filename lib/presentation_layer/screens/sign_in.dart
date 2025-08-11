@@ -1,44 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:shopping_app/presentation_layer/screens/widgets/custom_button.dart';
-import 'package:shopping_app/presentation_layer/screens/widgets/custom_password.dart';
-import 'package:shopping_app/presentation_layer/screens/widgets/custom_text_field.dart';
+import 'package:shopping_app/presentation_layer/screens/sign_in_body.dart';
 
 class SignInViews extends StatelessWidget {
-   SignInViews({super.key});
-    String email = '', password = '';
-
-  final GlobalKey<FormState> formkey = GlobalKey();
+  const SignInViews({super.key});
 
   @override
   Widget build(BuildContext context) {
-     return Form(
-      key: formkey,
-      child: Column(
-        children: [
-          CustomTextField(
-            onchang: (value) {
-              email = value;
-            },
-          ),
-          CustomFieldPassword(
-            onchang: (value) {
-              password = value;
-            },
-          ),
-          CustomButton(
-            onPressed: () {
-              if (formkey.currentState!.validate()) {
-                formkey.currentState!.save();
-                ScaffoldMessenger.of(
-                  context,
-                ).showSnackBar(SnackBar(content: Text('ok')));
-                // mydiolog(); must statefullwidget
-              }
-              print(email);
-            },
-          ),
-        ],
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Sign In', style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.blueGrey,
       ),
+      body: SignInViewsBody(),
     );
   }
 }
