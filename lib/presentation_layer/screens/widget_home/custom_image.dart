@@ -9,15 +9,15 @@ class CustomImage extends StatelessWidget {
       //  mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Image.asset(
-          'assets/images/welcome.png',
-          width: 170,
+          'assets/images/image.jpg',
+          width: 208,
           height: 110,
           fit: BoxFit.cover,
         ),
         const SizedBox(width: 12),
         Image.network(
           'https://i.postimg.cc/D0ZnkWDb/undraw-shopping-app-b80f.png',
-          width: 110,
+          width: 100,
           height: 110,
           fit: BoxFit.cover,
         ),
