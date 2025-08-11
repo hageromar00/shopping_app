@@ -21,6 +21,7 @@ class _SignInViewsBodyState extends State<SignInViewsBody> {
     return Form(
       key: formkey,
       child: Column(
+        // mainAxisAlignment: MainAxisAlignment.center,
         children: [
           CustomTextField(
             onchang: (value) {
